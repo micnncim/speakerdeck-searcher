@@ -1,8 +1,9 @@
 # speaker-deck-searcher
 
-The CLI searcher for Speaker Deck.
+The CLI searcher for [Speaker Deck](https://speakerdeck.com).
 
 Currently support only searching user stared decks.
+This tool searches decks by a query word for titles (e.g. Kubernetes).
 
 ## Installation
 
