@@ -40,7 +40,11 @@ func main() {
 	}
 
 	filtered := sd.FilterByTitle(decks, *query)
-	fmt.Println(sd.RenderDecks(filtered))
+	if len(filtered) != 0 {
+		fmt.Println(sd.RenderDecks(filtered))
+	} else {
+		fmt.Println("No result found.")
+	}
 
 	if err := cache.Put(decks); err != nil {
 		log.Fatal(err)
