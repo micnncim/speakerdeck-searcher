@@ -24,7 +24,9 @@ func StaredURL(username string) string {
 func FilterByTitle(decks []*Deck, pattern string) []*Deck {
 	var ret []*Deck
 	for _, d := range decks {
-		if strings.Contains(d.Title, pattern) {
+		title := strings.ToUpper(d.Title)
+		p := strings.ToUpper(pattern)
+		if strings.Contains(title, p) {
 			ret = append(ret, d)
 		}
 	}
