@@ -2,8 +2,8 @@
 
 The CLI searcher for [Speaker Deck](https://speakerdeck.com).
 
-Currently support only searching user stared decks.
-This tool searches decks by a query word for titles (e.g. Kubernetes).
+Currently supports only searching user stared decks.
+This tool searches decks by a query word for titles (e.g. kubernetes) and supports insenstive case.
 
 ## Installation
 
@@ -29,7 +29,7 @@ Args:
 ## Example
 
 ```
-$ speaker-deck-searcher micnncim Kubernetes
+$ speaker-deck-searcher micnncim kubernetes
 +-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
 |                      TITLE                      |                                                 URL                                                 |
 +-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
