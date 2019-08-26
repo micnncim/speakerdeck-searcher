@@ -8,7 +8,11 @@ import (
 	"github.com/olekukonko/tablewriter"
 )
 
-const SpeakerDeckBaseURL = "https://speakerdeck.com"
+const (
+	SpeakerDeckBaseURL = "https://speakerdeck.com"
+
+	maxTitleLength = 32
+)
 
 type Deck struct {
 	Title string
@@ -38,8 +42,8 @@ func RenderDecks(decks []*Deck) string {
 	for _, d := range decks {
 		var title string
 		r := []rune(d.Title)
-		if len(r) > 32 {
-			title = string(r[:32])
+		if len(r) > maxTitleLength {
+			title = string(r[:maxTitleLength]) + "..."
 		} else {
 			title = d.Title
 		}
