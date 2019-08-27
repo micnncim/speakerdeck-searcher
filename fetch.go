@@ -11,6 +11,10 @@ import (
 )
 
 func Fetch(baseURL string) ([]*Deck, error) {
+	s := NewSpinner(fmt.Sprintf("Fetching decks from %s...", baseURL))
+	s.Start()
+	defer s.Stop()
+
 	var decks []*Deck
 	var i int
 	for {
