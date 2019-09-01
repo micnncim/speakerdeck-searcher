@@ -88,5 +88,5 @@ func defaultCacheDir() (string, error) {
 		return "", nil
 	}
 	// TODO: Set cache dir properly.
-	return filepath.Join(homeDir, ".cache", "speaker-deck-searcher"), nil
+	return filepath.Join(homeDir, ".cache", "speakerdeck-searcher"), nil
 }

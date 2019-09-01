@@ -1,4 +1,4 @@
-# speaker-deck-searcher
+# speakerdeck-searcher
 
 The CLI searcher for [Speaker Deck](https://speakerdeck.com).
 
@@ -8,13 +8,13 @@ This tool searches decks by a query word for titles (e.g. kubernetes) and suppor
 ## Installation
 
 ```
-$ go get github.com/micnncim/speaker-deck-searcher/cmd/speaker-deck-searcher
+$ go get github.com/micnncim/speakerdeck-searcher/cmd/speakerdeck-searcher
 ```
 
 ## Usage
 
 ```
-$ speaker-deck-searcher --help
+$ speakerdeck-searcher --help
 usage: main [<flags>] <username> <query>
 
 Flags:
@@ -29,7 +29,7 @@ Args:
 ## Example
 
 ```
-$ speaker-deck-searcher micnncim kubernetes
+$ speakerdeck-searcher micnncim kubernetes
 +-------------------------------------------------+-----------------------------------------------------------------------------------------------------+
 |                      TITLE                      |                                                 URL                                                 |
 +-------------------------------------------------+-----------------------------------------------------------------------------------------------------+

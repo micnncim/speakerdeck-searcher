@@ -1,4 +1,4 @@
-module github.com/micnncim/speaker-deck-searcher
+module github.com/micnncim/speakerdeck-searcher
 
 go 1.12
 

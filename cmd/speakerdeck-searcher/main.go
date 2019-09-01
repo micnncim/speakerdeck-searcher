@@ -6,7 +6,7 @@ import (
 
 	"gopkg.in/alecthomas/kingpin.v2"
 
-	sd "github.com/micnncim/speaker-deck-searcher"
+	sd "github.com/micnncim/speakerdeck-searcher"
 )
 
 var (
