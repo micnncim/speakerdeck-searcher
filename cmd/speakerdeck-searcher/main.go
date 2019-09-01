@@ -10,9 +10,10 @@ import (
 )
 
 var (
-	username   = kingpin.Arg("username", "Name of user whose stared decks.").Required().String()
+	username   = kingpin.Arg("username", "The name of user whose stared decks.").Required().String()
 	query      = kingpin.Arg("query", "The word for querying decks.").Required().String()
-	clearCache = kingpin.Flag("clear-cache", "Clear decks cache.").Bool()
+	clearCache = kingpin.Flag("clear-cache", "Whether it clears cache of decks.").Bool()
+	noCache    = kingpin.Flag("no-cache", "Whether it makes cache for decks.").Bool()
 )
 
 func main() {
@@ -47,12 +48,12 @@ func main() {
 		fmt.Println("No result found.")
 	}
 
-	if !cacheExpired {
+	if !cacheExpired || *noCache {
 		return
 	}
 
 	if err := cache.Put(*username, decks); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("Fetched decks have been cached. To clear the cache, use --clear-cache flag.")
+	fmt.Println("The fetched decks have been cached. To clear the cache, use --clear-cache flag.")
 }
